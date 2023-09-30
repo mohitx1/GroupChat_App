@@ -5,12 +5,8 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const fs = require("fs");
 
-// const cors = require("cors");
-// app.use(
-//     cors({
-//       origin: "*",
-//     })
-//   );
+const cors = require("cors");
+app.use(cors());
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -56,11 +52,11 @@ app.use("/homePage", homePageRouter);
 app.use("/chat", chatRouter);
 app.use("/group", groupRouter);
 
-
+const port=process.env.PORT || 4000
 
 sequelize
   .sync()
   .then((result) => {
-    app.listen(process.env.PORT || 4000);
+    app.listen(port, () =>console.log(`server running on port: ${port}`));
   })
   .catch((err) => console.log(err));
