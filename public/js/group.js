@@ -20,6 +20,7 @@ async function createGroup() {
     }
 
     const token = localStorage.getItem("token");
+     console.log('>>>>>>>>>>>>>>>>>>>>>',token)
     const res = await axios.post(
       "http://localhost:4000/group/createGroup",
       {
@@ -27,6 +28,7 @@ async function createGroup() {
         members: members,
       },
       { headers: { Authorization: token } }
+     
     );
     alert(`${groupName} Created Successfully!`);
     window.location.reload();

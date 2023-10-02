@@ -31,7 +31,6 @@ const UserGroup = require("./models/userGroup");
 
 
 //Relationships between Tables
-User.hasMany(Chat, { onDelete: "CASCADE", hooks: true });
 
 Chat.belongsTo(User);
 Chat.belongsTo(Group);

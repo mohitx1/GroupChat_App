@@ -3,16 +3,8 @@ html {
   height: 100%;
   margin: 0;
   background: #f4eeff;
-  background: -webkit-linear-gradient(to right, #dcd6f7, #426474);
-  background: linear-gradient(to right, #426474, #426474);
-
-  background-color: #e5e5f7;
-  background-color: #708b97;
-  /* opacity: 1; */
-  background-image:  linear-gradient(135deg, #426474 25%, transparent 25%), linear-gradient(225deg, #426474 25%, transparent 25%), linear-gradient(45deg, #426474 25%, transparent 25%), linear-gradient(315deg, #426474 25%, #708b97 25%);
-  background-position:  33px 0, 33px 0, 0 0, 0 0;
-  background-size: 66px 66px;
-  background-repeat: repeat;
+  background: -webkit-linear-gradient(to right, #dcd6f7, #95a1d5);
+  background: linear-gradient(to right, #dcd6f7, #95a1d6);
   
 }
 /* f4eeff
@@ -60,7 +52,6 @@ a6b1e1 */
 .type_msg {
   background-color: rgba(0, 0, 0, 0.3) !important;
   border: 0 !important;
-  border-radius: 15px 0 0 15px !important;
   color: white !important;
   height: 60px !important;
   overflow-y: auto;
