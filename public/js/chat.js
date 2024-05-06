@@ -44,7 +44,10 @@ async function messageSend() {
         const groupName = localStorage.getItem("groupName");
         if (!groupName || groupName == "") {
             return alert("Select group to send the message");
+        }else if(!message || message==''){
+            return alert("Can't send empty message")
         }
+        
         const res = await axios.post(
             `http://localhost:4000/chat/sendMessage/`,
             {
