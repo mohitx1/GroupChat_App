@@ -50,6 +50,7 @@ app.use("/user", userRouter);
 app.use("/homePage", homePageRouter);
 app.use("/chat", chatRouter);
 app.use("/group", groupRouter);
+app.get("*",(req,res)=>res.redirect('/'));
 
 const port=process.env.PORT || 4000
 
